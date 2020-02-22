@@ -1,0 +1,23 @@
+
+<div  class="row">
+    <div class="col-xs-12">
+        <div>
+        <label>No. Of Users</label>   
+        <input type="number" min="1" max="20" [(ngModel)]="noOfUsers"></div>
+        <div *ngIf="IsError" class="alert alert-danger">
+            No of users should be greater than 0 and less than or equal to 20
+        </div>
+    </div>
+    <div class="col-xs-12"><button (click)="loadUsers()">Submit</button></div>
+    <br>
+    <br>
+</div>
+ 
+    <div class="gallery"  *ngFor="let user of users">
+        <a target="_blank" (click)="gotoUser(user)">
+            <img [src]="user.picture.medium" alt="{{user.name.first}} {{user.name.last}}" width="175" height="175">
+          </a>
+          <div class="desc">{{user.name.first}} {{user.name.last}} </div>
+    </div>
+
+  

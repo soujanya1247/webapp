@@ -1,0 +1,11 @@
+
+<button routerLink="/users">Go Back</button>
+<div class="column">
+    <img class="img-circle img-thumbnail" [src]="selectedUser.picture.medium">
+    <div class="fullname">
+       {{selectedUser.name.first}} {{selectedUser.name.last}} 
+    </div>
+    <div>{{selectedUser.email}}</div>
+    <div>{{selectedUser.location.street.name}}, {{selectedUser.location.city}}</div>
+    <div>{{selectedUser.location.state}}, {{selectedUser.location.postcode}}</div>
+</div>
